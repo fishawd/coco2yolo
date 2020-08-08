@@ -10,8 +10,10 @@ output = "/home/user/datasets/coco/labels/train2017/"
 # json_file = "/home/user/datasets/coco/annotations/instances_val2017.json"
 # output = "/home/user/datasets/coco/labels/val2017/"
 
-
-class COCO2YOLO():
+"""
+将COCO instance数据集转为YOLO格式
+"""
+class COCO2YOLO:
     def __init__(self):
         self._check_file_and_dir(json_file, output)
         self.labels = json.load(open(json_file, 'r', encoding='utf-8'))
@@ -106,7 +108,7 @@ class COCO2YOLO():
     def _save_txt(self, anno_dict):
         for k, v in anno_dict.items():
             file_name = v[0][0].split(".")[0] + ".txt"
-            with open(output + file_name, 'w', encoding='utf-8') as f:
+            with open(os.path.join(output, file_name), 'w', encoding='utf-8') as f:
                 print(k, v)
                 for obj in v:
                     cat_name = self.coco_id_name_map.get(obj[1])
