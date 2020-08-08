@@ -1,6 +1,9 @@
 # coco2yolo
 
-[TOC]
+- [coco2yolo](#coco2yolo)
+  * [1. coco2yolo](#1-coco2yolo)
+  * [2. datset2coco](#2-datset2coco)
+  * [3. dota2coco](#3-dota2coco)
 
 ## 1. coco2yolo
 Converts MSCOCO dataset to Yolo format
