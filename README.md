@@ -39,3 +39,8 @@ Converts DOTA dataset to  MSCOCO format
 
 将DOTA数据集转换为MSCOCO格式
 
+DOTA的标注格式为
+
+    x1, y1, x2, y2, x3, y3, x4, y4 category_id
+
+        

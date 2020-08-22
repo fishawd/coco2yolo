@@ -29,9 +29,7 @@ class DOTA2COCO:
     def __init__(self, image_path, label_path, categories):
         self.image_path = image_path
         self.label_path = label_path
-        self.output_path = output_path
         self.categories = categories
-        self.info = info
 
     def _load_files(self, file_path):
         if not os.path.exists(file_path):
